@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rohan Kumar - Full-Stack Developer</title>
+
+  <!-- Fonts from Google Fonts (needs internet) -->
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+
+  <!-- All the styling lives in this file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== HEADER: logo, menu, theme buttons ========== -->
+  <header>
+    <div class="container header-inner">
+      <a class="logo" href="#top">rohan.dev</a>
+
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <!-- Click a circle to change the theme. data-theme must match a theme name in style.css -->
+      <div class="theme-buttons">
+        <button data-theme="mongo"   class="swatch swatch-mongo"   title="Mongo theme"   aria-label="Mongo theme"></button>
+        <button data-theme="react"   class="swatch swatch-react"   title="React theme"   aria-label="React theme"></button>
+        <button data-theme="express" class="swatch swatch-express" title="Express theme" aria-label="Express theme"></button>
+        <button data-theme="node"    class="swatch swatch-node"    title="Node theme"    aria-label="Node theme"></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top" class="container">
+
+    <!-- ========== HERO: name + interactive profile box ========== -->
+    <section class="hero">
+      <div>
+        <h1>Rohan <span class="last-name">Kumar</span></h1>
+        <p class="intro">
+          Full-stack developer from Faridabad. I build web apps end to end with
+          MongoDB, Express, React and Node.
+        </p>
+        <a class="button" href="#projects">See my projects</a>
+        <a class="button outline" href="#contact">Get in touch</a>
+      </div>
+
+      <!-- The box that shows profile data like an API response -->
+      <div class="card api-box">
+        <div class="api-tabs">
+          <button data-endpoint="me">/me</button>
+          <button data-endpoint="skills">/skills</button>
+          <button data-endpoint="education">/education</button>
+          <button data-endpoint="contact">/contact</button>
+        </div>
+        <p id="api-url"></p>
+        <pre id="api-output"></pre>
+      </div>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section id="projects">
+      <h2>Things I've built</h2>
+      <div class="grid">
+
+        <!-- Copy one <article> block to add another project -->
+        <article class="card project">
+          <h3>TaskFlow</h3>
+          <p>A kanban board with drag-and-drop cards and JWT login.</p>
+          <p class="tags">React, Express, MongoDB</p>
+        </article>
+
+        <article class="card project">
+          <h3>ShopLane</h3>
+          <p>An online store with a cart, order history and admin dashboard.</p>
+          <p class="tags">MERN, Redux, REST API</p>
+        </article>
+
+        <article class="card project">
+          <h3>ChatNest</h3>
+          <p>Real-time chat rooms with message history.</p>
+          <p class="tags">Node.js, Socket.io, React</p>
+        </article>
+
+      </div>
+      <p><a href="https://github.com/rohann005" target="_blank">More on my GitHub</a></p>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section id="skills">
+      <h2>What I work with</h2>
+      <div class="grid">
+        <div class="card"><h3>Frontend</h3><p>React, JavaScript, HTML5, CSS3, Tailwind CSS</p></div>
+        <div class="card"><h3>Backend</h3><p>Node.js, Express.js, REST APIs, JWT</p></div>
+        <div class="card"><h3>Database</h3><p>MongoDB, Mongoose</p></div>
+        <div class="card"><h3>Tools</h3><p>Git, GitHub, Postman, VS Code</p></div>
+      </div>
+    </section>
+
+    <!-- ========== EDUCATION ========== -->
+    <section id="education">
+      <h2>Where I'm learning</h2>
+      <div class="card">
+        <h3>BCA, Maharishi Dayanand University</h3>
+        <p>2024 to 2027, in progress</p>
+      </div>
+      <div class="card">
+        <h3>Class 12, Bohra Public School</h3>
+        <p>CBSE, completed 2024</p>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section id="contact">
+      <h2>Let's build something</h2>
+      <p>I'm looking for my first full-stack role or internship.</p>
+      <ul class="contact-list">
+        <li><a href="mailto:rohan971189@gmail.com">Email: rohan971189@gmail.com</a></li>
+        <li><a href="tel:+919711893926">Phone: +91 97118 93926</a></li>
+        <li><a href="https://www.linkedin.com/in/rohankumar005" target="_blank">LinkedIn: rohankumar005</a></li>
+        <li><a href="https://github.com/rohann005" target="_blank">GitHub: rohann005</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">Rohan Kumar, Faridabad, Haryana</div>
+  </footer>
+
+  <!-- All the behaviour (themes + profile box) lives in this file -->
+  <script src="script.js"></script>
+</body>
+</html>
